@@ -4,7 +4,7 @@
   "description": "Backend for Rev Orbit Auto Frames",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"node server/server.js\" \"node server/razorpay-server.js\",
+    "start":"concurrently 'node server/server.js' 'node server/razorpay-server.js'",
     "dev": "nodemon server.js"
   },
   "dependencies": {
