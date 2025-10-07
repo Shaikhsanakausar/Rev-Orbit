@@ -1,0 +1,139 @@
+.account-dashboard {
+  min-height: 100vh;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px 16px;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 260px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+  padding: 32px 24px;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ef4444;
+  box-shadow: 0 2px 8px 0 rgba(239,68,68,0.08);
+  margin-bottom: 12px;
+}
+
+.profile-image-fallback {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.profile-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.profile-section p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.profile-section p:last-child {
+  color: #bbb;
+  font-size: 0.85rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar nav ul li.active {
+  background: #ef4444;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(239,68,68,0.10);
+}
+
+.sidebar nav ul li:hover:not(.active) {
+  background: #ffeaea;
+  color: #ef4444;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    flex-direction: column;
+    gap: 0;
+    padding: 16px 4px;
+  }
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .sidebar nav ul li {
+    margin-bottom: 0;
+    padding: 10px 12px;
+    font-size: 0.98rem;
+  }
+}
